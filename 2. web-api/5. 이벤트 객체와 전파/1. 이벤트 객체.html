@@ -7,20 +7,26 @@
     <title>Document</title>
 </head>
 <body>
+    
     <p>아무곳이나 클릭하세요!</p>
-    <em class="message"></em></em>
+    <em class="message"></em>
+
     <script>
+
         const $em = document.querySelector('.message');
 
-        //문서 전체에 이벤트 핸들러
+        //문서 전체에 이벤트 핸들러 등록
 
-        //이벤트 핸들러의 첫번쩨 인수로 이벤트에 관련된 다양한 정보가 들어있는
+        //이벤트 핸들러의 첫번째 인수로 이벤트에 관련된 다양한 정보가 들어있는
         //이벤트 객체가 자동 전달됩니다.
         //이벤트 객체를 사용하려면 적당한 매개변수를 선언해서 사용하면 됩니다.
-         document.addEventListener('click', function(e){
-            console.log(e)
+        document.addEventListener('click', function(e) {
+            console.log(e);
             $em.textContent = `x: ${e.clientX}, y: ${e.clientY}`;
-         })
+        });
+
     </script>
+
+
 </body>
 </html>
